@@ -16,13 +16,16 @@ public class LevelsEntity {
     @Id
     @Column(name = "userid", nullable = false, columnDefinition = "char", length = 19)
     private String userid;
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "serverid", nullable = false, columnDefinition = "char", length = 19)
     private String serverid;
+
     @Basic
     @Column(name = "lv", nullable = true)
     private Byte lv;
+
     @Basic
     @Column(name = "xp", nullable = true)
     private Integer xp;
