@@ -4,8 +4,6 @@ import com.oktav.piano.back.API.Repository.LevelsRepository;
 import com.oktav.piano.back.API.ViewModel.LevelOverviewModel;
 import com.oktav.piano.back.API.ViewModel.LevelUserModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,7 +28,7 @@ public class LevelsService {
 
     }
     public LevelUserModel getSpecificUser(String serverId, String userID){
-        LevelsEntity userData=levelsRepository.findSpecficEntity(serverId,userID);
+        LevelsEntity userData=levelsRepository.findSpecificEntity(serverId,userID);
         if (userData == null) {
             return null;
         }
